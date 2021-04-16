@@ -1,22 +1,54 @@
+{% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<title>Django Girls blog</title>
     </head>
     <body>
-        <div>
+        <div class="page-header">
             <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        {% for post in posts %}
+            </div>
+            <div class="content container">
+                <div class="row">
+                    <div class="col-md-8">
+                        {% for post in posts %}
+                            <div class="post">
+                                <div class="date">
+                                    <p>publicado: {{ post.published_date }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
         <div>
-            <p> publicado: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-        {% endfor %}
-        <div>
-
             
             
         </div>
+        
     </body>
+    
+<body>
+   
+    
+</body>
+<h4>
+    Una breve introducción a Djano
+</h4>
+<div separador>
+    <h5>
+        Django es un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como modelo–vista–controlador (MVC). Fue desarrollado en origen para gestionar varias páginas orientadas a noticias de la World Company de Lawrence, Kansas, y fue liberada al público bajo una licencia BSD en julio de 2005; el framework fue nombrado en alusión al guitarrista de jazz gitano Django Reinhardt.
+    
+    En junio de 2008 fue anunciado que la recién formada Django Software Foundation se haría cargo de Django en el futuro.
+    
+    La meta fundamental de Django es facilitar la creación de sitios web complejos. Django pone énfasis en el re-uso, la conectividad y extensibilidad de componentes, el desarrollo rápido y el principio No te repitas (DRY, del inglés Don't Repeat Yourself). Python es usado en todas las partes del framework, incluso en configuraciones, archivos, y en los modelos de datos.
+    </h5>
+
+
+</div>
+<h5></h5>
+
+</div>
+
+
 </html>
